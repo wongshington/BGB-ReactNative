@@ -1,14 +1,14 @@
 import React from "react";
-import { HashRouter } from 'react-router-dom';
+import { NativeRouter } from 'react-router-native';
 import App from "./app";
 import { Provider } from 'react-redux';
 
 const Root = ({store}) => {
   return(
     <Provider store={store}>
-        <HashRouter>
+        <NativeRouter>
           <App></App>
-        </HashRouter>
+        </NativeRouter>
       </Provider>
   )
 };
