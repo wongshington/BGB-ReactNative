@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, View } from "react-native";
 import { styles } from "../../styles";
-import { Route,Switch } from 'react-router-dom';
+import { Route,Switch } from 'react-router-native';
 
 const App = () => {
 
