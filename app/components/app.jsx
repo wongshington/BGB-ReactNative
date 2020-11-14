@@ -1,16 +1,12 @@
 import React from "react";
-import { Text, View } from "react-native";
-import { styles } from "../../styles";
-import { Route,Switch } from 'react-router-native';
+import { styles } from "../styles/styles";
+import LoginOptionsComponent from "./session/login_options_component"
+// import { Route,Switch } from 'react-router-native';
 
 const App = () => {
 
   return(
-      <View>
-        <Text>
-          component goes here
-        </Text>
-      </View>
+    <LoginOptionsComponent></LoginOptionsComponent>   
   )
 };
 
