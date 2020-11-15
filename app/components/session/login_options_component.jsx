@@ -2,6 +2,8 @@ import React from "react"
 import { Text, View } from "react-native";
 import { layoutStyles, loginOptionsStyles } from "../../styles/styles"
 
+import FBLogin from "./fb_login"
+
 const LoginOptionsComponent = () => {
   return(
     <View style={[layoutStyles.backgroundLayout,loginOptionsStyles.loginLayoutCentering]}>
@@ -30,11 +32,7 @@ const LoginOptionsComponent = () => {
                 Sign up with Google
               </Text>
             </View>
-            <View style={[loginOptionsStyles.sessionsButtonLayout, loginOptionsStyles.sessionsButtonFacebook]}>
-              <Text style={[loginOptionsStyles.sessionFacebookText,loginOptionsStyles.font]}>
-                Sign up with Facebook
-              </Text>
-            </View>
+            <FBLogin></FBLogin>
           </View>
 
           <View style={loginOptionsStyles.redirectLink}>
