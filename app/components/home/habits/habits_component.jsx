@@ -9,11 +9,9 @@ const fakeHabits = [
   {name: 'Drink water', icon: 'water', total: '8', completed: '5', unit: 'cups'},
 ];
 
-export default class HabitsComponent extends Component { 
-
-  render() {
-    return(
-      <View style={habitStyles.main}>
+const HabitsComponent = () => {
+  return(
+    <View style={habitStyles.main}>
         <Text>Daily Habits</Text>
         <View >
           {fakeHabits.map((prop, key) => {
@@ -29,6 +27,7 @@ export default class HabitsComponent extends Component {
           })}
         </View>
       </View>
-    )
-  }
+  )
 }
+
+export default HabitsComponent

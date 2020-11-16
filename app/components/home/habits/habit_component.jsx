@@ -1,16 +1,9 @@
 import React, { Component } from "react"
-import { Text, View } from "react-native";
+import { Text, View, Icon } from "react-native";
 import { habitStyles } from "./_habits";
 
-const fakeHabits = [
-  {name: 'Drink water', icon: 'water', total: '8', completed: '5', unit: 'cups'},
-  {name: 'Drink water', icon: 'water', total: '8', completed: '5', unit: 'cups'},
-  {name: 'Drink water', icon: 'water', total: '8', completed: '5', unit: 'cups'},
-];
-
-export default class HabitsComponent extends Component { 
-
-  constructor() {
+export default class HabitComponent extends Component { 
+  constructor(props) {
     super(props) 
       this.state = { 
         icon: this.props.icon,

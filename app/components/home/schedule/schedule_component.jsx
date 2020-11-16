@@ -1,5 +1,6 @@
 import React from "react"
-import { Text, View } from "react-native";
+import { Icon, Text, View } from "react-native";
+import { Link } from "react-router-native";
 import { scheduleStyles } from "./_schedule"
 
 const schedules = ['Morning', 'Afternoon', 'Evening', 'Nighttime'];
