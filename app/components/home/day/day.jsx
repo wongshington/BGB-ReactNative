@@ -1,6 +1,6 @@
 import React from "react"
 import { View } from "react-native";
-import HabitsComponent from "../habits/habit_component";
+import HabitsComponent from "../habits/habits_component";
 import ScheduleComponent from "../schedule/schedule_component";
 
 const DayComponent = () => {

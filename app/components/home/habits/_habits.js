@@ -9,12 +9,16 @@ export const habitStyles = StyleSheet.create({
   habit: {
     display: "flex",
     flexDirection: "row",
+    height: 20,
+    width: "100%",
   },
   
   progressBar: {
-    height: 20,
-    width: 200,
+    height: 30,
+    width: 300,
     backgroundColor: "lightgray",
-    color: "white",
+    display: "flex",
+    flexDirection: "row",
+    // color: "white",
   },
 })
