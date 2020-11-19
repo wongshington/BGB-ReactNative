@@ -14,7 +14,7 @@ export const headerStyles = StyleSheet.create({
     top: 10,
     height: 37,
     width: 37,
-    borderRadius: "50%",
+    borderRadius: 37/2,
     backgroundColor: "#979191",
   },
 });

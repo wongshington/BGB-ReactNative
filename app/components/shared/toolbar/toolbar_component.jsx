@@ -16,7 +16,7 @@ const ToolbarComponent = () => {
         />
       </Link>     
       <Link style={toolbarStyles.scheduleLink}
-            to="/schedule">
+            to="/auth/signup">
         <Icon
           name="event"
           size={30}

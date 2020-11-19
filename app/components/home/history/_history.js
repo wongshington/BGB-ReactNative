@@ -14,7 +14,7 @@ export const historyStyles = StyleSheet.create({
   dateText: {
     fontSize: 20,
     color: colorWhite,
-    fontWeight: 500,
+    fontWeight: "500",
     height: 25,
     display: "flex",
     alignItems: "flex-end",
