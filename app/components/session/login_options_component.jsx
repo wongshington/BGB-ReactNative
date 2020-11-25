@@ -1,6 +1,6 @@
-import React from "react"
+import React from "react";
 import { Text, View } from "react-native";
-import { layoutStyles, loginOptionsStyles } from "../../styles/styles"
+import { layoutStyles, loginOptionsStyles } from "../../styles/styles";
 
 const LoginOptionsComponent = () => {
   return(

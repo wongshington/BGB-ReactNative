@@ -1,4 +1,13 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
+
+// Window dimensions
+export const windowWidth = Dimensions.get('window').width;
+export const windowHeight = Dimensions.get('window').height;
+
+// Universal color variables
+export const colorGray = "#979191";
+export const colorLightgray = "#c4c4c4";
+export const colorWhite = "#fff";
 
 export const layoutStyles = StyleSheet.create({
   backgroundLayout: {
@@ -6,6 +15,7 @@ export const layoutStyles = StyleSheet.create({
     backgroundColor: "#383838"
   } 
 })
+
 export const loginOptionsStyles = StyleSheet.create({
 
   font: {
@@ -35,7 +45,7 @@ export const loginOptionsStyles = StyleSheet.create({
     width: 96,
     height: 96,
     borderRadius: 96/2,
-    backgroundColor: "#C4C4C4",
+    backgroundColor: colorLightgray,
   },
 
   titleContainer: {
@@ -48,7 +58,7 @@ export const loginOptionsStyles = StyleSheet.create({
   Title: {
     fontSize: 72,
     fontStyle: "italic",
-    color: "#FFFFFF",
+    color: colorWhite,
     fontWeight: "bold"
   },
 
@@ -75,7 +85,7 @@ export const loginOptionsStyles = StyleSheet.create({
   },
 
   sessionsButtonEmail: {
-    backgroundColor: "#C4C4C4",
+    backgroundColor: colorLightgray,
   },
 
   sessionsButtonGoogle: {
@@ -93,12 +103,12 @@ export const loginOptionsStyles = StyleSheet.create({
 
   sessionGoogleText: {
     fontSize: 21,
-    color: "#FFFFFF"
+    color: colorWhite,
   },
 
   sessionFacebookText: {
     fontSize: 21,
-    color: "#FFFFFF"
+    color: colorWhite,
   },
 
   redirectLink: {
@@ -112,7 +122,7 @@ export const loginOptionsStyles = StyleSheet.create({
     fontWeight: "300",
     fontSize: 21,
     fontStyle: "italic",
-    color: "#FFFFFF",
+    color: colorWhite,
   }
 
 });
