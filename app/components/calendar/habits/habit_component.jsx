@@ -49,12 +49,22 @@ export default class HabitComponent extends Component {
 
     return(
       <View style={habitStyles.habit}>
-          <Icon name={this.state.icon} type={this.state.type}/>
+        <Icon name={this.state.icon} 
+              type={this.state.type}
+              style={habitStyles.icon}/>
         <View style={habitStyles.progressBar}>
-          <Text>{this.state.name}</Text>
-          <Text>{`${this.state.completed}/${this.state.total} ${this.state.unit}`}</Text>
-          <Icon name='add' onPress={this.increaseItem} />
-          <Icon name='delete' onPress={this.decreaseItem} />
+          <View style={habitStyles.progressBarText}>
+            <Text style={habitStyles.text}>{this.state.name}</Text>
+          </View>
+          <View style={habitStyles.progressBarButtons}>
+            <Text style={habitStyles.text}>{`${this.state.completed}/${this.state.total} ${this.state.unit}`}</Text>
+            <Icon name='add' 
+                  size={17}
+                  onPress={this.increaseItem} />
+            <Icon name='delete' 
+                  size={17}
+                  onPress={this.decreaseItem} />
+          </View>
         </View>
       </View>
     )

@@ -1,6 +1,4 @@
-import { StyleSheet, Dimensions } from "react-native";
-
-// var width = Dimensions.get('window').width; //full width
+import { StyleSheet } from "react-native";
 
 export const toolbarStyles = StyleSheet.create({
   main: {

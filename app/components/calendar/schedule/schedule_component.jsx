@@ -10,13 +10,14 @@ const ScheduleComponent = () => {
   return(
     <View style={scheduleStyles.main}>
       <Text style={scheduleStyles.title}>Daily Schedule</Text>
-      <View>
+        <View>
         {schedules.map((prop, key) => {
           return (
             <View style={scheduleStyles.navigationBar} key={key}>
               <Text>{prop}</Text>
               <Link to='/schedule'>
                 <Icon name='add-circle'
+                      size={20}
                       type='material' />
               </Link>
             </View>

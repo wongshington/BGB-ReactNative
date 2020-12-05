@@ -5,7 +5,7 @@ import { NativeRouter, Route } from 'react-router-native';
 import { View } from 'react-native';
 import { NativeRouter, Route } from 'react-router-native';
 import { View } from 'react-native';
-import DayComponent from "./home/day/day";
+import DayComponent from "./calendar/day/day";
 import LoginOptionsComponent from "./session/login_options_component";
 
 const App = () => {
