@@ -9,11 +9,11 @@ const TextModal = ({text = ["An unexpected error has occured"]}) => {
   return (
 		<View
 			style={[
-				layoutStyles.backgroundLayout,
 				loginOptionsStyles.loginLayoutCentering,
+				modalStyles.modalContainer,
 			]}
 		>
-			<View style={loginOptionsStyles.contentContainer}>
+			<View style={[loginOptionsStyles.contentContainer]}>
 				<ImageBackground
 					style={modalStyles.pinkBox}
 					source={require("/Users/jwong/Desktop/jesse/BGB-ReactNative/assets/errorModalpink.png")}
@@ -22,10 +22,10 @@ const TextModal = ({text = ["An unexpected error has occured"]}) => {
 						style={modalStyles.warningIcon}
 						source={require("/Users/jwong/Desktop/jesse/BGB-ReactNative/assets/warningIcon.png")}
 					></Image>
-          <View style={modalStyles.textBox}>{errorMessages}</View>
+					<View style={modalStyles.textBox}>{errorMessages}</View>
 				</ImageBackground>
-
 			</View>
+			<View style={[modalStyles.modalShade]}></View>
 		</View>
 	); 
 }
