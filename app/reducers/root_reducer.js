@@ -1,9 +1,11 @@
-import { combineReducers } from "redux"
+import { combineReducers } from "redux";
+import uiReducer from "./ui_reducer";
 
 const rootReducer = () => {
-  return {
-    //some reducer
-  }
-}
+	return {
+		//some reducer
+		ui: uiReducer,
+	};
+};
 
-export default rootReducer
+export default rootReducer;
