@@ -1,6 +1,7 @@
 import React from "react";
 import { Text, View } from "react-native";
-import { layoutStyles, loginOptionsStyles } from "../../styles/styles";
+import { Link } from "react-router-native";
+import { layoutStyles, loginOptionsStyles } from "../../styles/styles"
 
 const LoginOptionsComponent = () => {
   return(
@@ -21,9 +22,11 @@ const LoginOptionsComponent = () => {
         <View style={loginOptionsStyles.sessionsContainer}>
           <View style={loginOptionsStyles.sessionsButtonContainer}>
             <View style={[loginOptionsStyles.sessionsButtonLayout, loginOptionsStyles.sessionsButtonEmail]}>
-              <Text style={[loginOptionsStyles.sessionEmailText,loginOptionsStyles.font]}>
-                Sign up with email
-              </Text>
+              <Link to='/auth/signup'>
+                <Text style={[loginOptionsStyles.sessionEmailText,loginOptionsStyles.font]}>
+                  Sign up with email
+                </Text>
+              </Link>
             </View>
             <View style={[loginOptionsStyles.sessionsButtonLayout, loginOptionsStyles.sessionsButtonGoogle]}>
               <Text style={[loginOptionsStyles.sessionGoogleText,loginOptionsStyles.font]}>
@@ -38,9 +41,11 @@ const LoginOptionsComponent = () => {
           </View>
 
           <View style={loginOptionsStyles.redirectLink}>
+            <Link to='/auth/signin'>
               <Text style={[loginOptionsStyles.redirectLinkText,loginOptionsStyles.font]}>
                 Have an account? Log in
               </Text>
+            </Link>
           </View>
         </View>
       </View>

@@ -7,6 +7,7 @@ export const windowHeight = Dimensions.get('window').height;
 // Universal color variables
 export const colorGray = "#979191";
 export const colorLightgray = "#c4c4c4";
+export const colorDarkgray = "#383838";
 export const colorWhite = "#fff";
 
 export const layoutStyles = StyleSheet.create({
@@ -14,7 +15,7 @@ export const layoutStyles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#383838"
   } 
-})
+});
 
 export const loginOptionsStyles = StyleSheet.create({
 
