@@ -3,6 +3,7 @@ import { ScrollView, Text, View } from "react-native";
 import { recommendationStyles } from "./_recommendation";
 import { windowWidth } from "../../../styles/styles";
 
+// TODO: remove once we get data from DB
 const fakeRecs = [
   {name: 'recommendation 1'},
   {name: 'recommendation 2'},

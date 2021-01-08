@@ -1,14 +1,19 @@
 import React from "react";
-import { View } from "react-native";
-import { Link } from 'react-router-native';
+import { TouchableHighlight, View, Text } from "react-native";
 import { headerStyles } from "./_header";
 
-const HeaderComponent = () => {
+// TODO: Update the Profile name to the actual user once connected
+// to the DB
+const HeaderComponent = ({navigation, title}) => {
   return (
     <View style={headerStyles.main}>
-      <Link to="/home">
-        <View style={headerStyles.profileLink}></View>
-      </Link>     
+      <TouchableHighlight 
+        style={headerStyles.profileLink} 
+        onPress={() => navigation.navigate('Profile', {name: 'LB'})}
+      >
+        <Text></Text>
+      </TouchableHighlight>
+      <Text style={headerStyles.title}>{title}</Text>
     </View>
   )
 }

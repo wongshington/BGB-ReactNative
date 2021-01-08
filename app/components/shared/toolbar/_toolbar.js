@@ -1,13 +1,12 @@
 import { StyleSheet } from "react-native";
+import { colorLightgray } from "../../../styles/styles";
 
 export const toolbarStyles = StyleSheet.create({
   main: {
-    flex: 1,
-    backgroundColor: "#c4c4c4",
+    backgroundColor: colorLightgray,
     position: "relative",
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-between",
     alignItems: "center",
   },
 

@@ -1,14 +1,12 @@
 import { StyleSheet } from "react-native";
+import { windowHeight } from "../../styles/styles";
 
 export const dayStyles = StyleSheet.create({
   main: {
     display: "flex",
-    flex: 1,
   },
-  section: {
-    flex: 3,
+
+  content: {
+    height: windowHeight - 240,
   },
-  toolbar: {
-    flex: 1,
-  }
 })

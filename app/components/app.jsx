@@ -1,25 +1,45 @@
 import React from "react";
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
 import LoginOptionsComponent from "./session/login_options_component";
 import HomeComponent from "./home/home_component";
-import { NativeRouter, Route } from 'react-router-native';
-import { View } from 'react-native';
-import { NativeRouter, Route } from 'react-router-native';
-import { View } from 'react-native';
-import DayComponent from "./calendar/day/day";
-import LoginOptionsComponent from "./session/login_options_component";
+import DayComponent from "./day/day_component";
+import ScheduleComponent from "./schedule/schedule_component";
+import ProfileComponent from "./profile/profile_component";
+
+const Stack = createStackNavigator();
 
 const App = () => {
   return(
-    <NativeRouter>
-      <View style={{overflow: "hidden"}}>
-        <Route exact path="/" component={HomeComponent} />
-        <Route path="/login" component={LoginOptionsComponent} />
-        <Route path="/home" component={HomeComponent} />
-        <Route exact path="/" component={DayComponent} />
-        <Route path="/login" component={LoginOptionsComponent} />
-        <Route path="/schedule/:time" component={DayComponent} />
-      </View>
-    </NativeRouter>
+    <NavigationContainer>
+      <Stack.Navigator
+      screenOptions={{
+        headerShown: false
+      }}
+      >
+        {/* <Stack.Screen 
+          name="Login" 
+          component={LoginOptionsComponent}
+        /> */}
+        <Stack.Screen
+          name="Home"
+          component={HomeComponent}
+        />
+        <Stack.Screen 
+          name="Day" 
+          component={DayComponent}
+        />
+        <Stack.Screen 
+          name="Schedule" 
+          component={ScheduleComponent}
+        />
+        <Stack.Screen 
+          name="Profile" 
+          component={ProfileComponent}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   )
 };
 

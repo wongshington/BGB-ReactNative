@@ -2,11 +2,12 @@ import React, { Component } from "react"
 import { Text, View } from "react-native";
 import { habitStyles } from "./_habits";
 import { Icon } from "react-native-elements"
+import { LinearGradient } from 'expo-linear-gradient';
+import { colorWhite } from "../../../styles/styles";
 
 export default class HabitComponent extends Component { 
   constructor(props) {
     super(props) 
-    console.log(this.props);
     this.state = { 
       icon: this.props.icon,
       name: this.props.name,
@@ -17,20 +18,10 @@ export default class HabitComponent extends Component {
     }
     this.increaseItem = this.increaseItem.bind(this);
     this.decreaseItem = this.decreaseItem.bind(this);
+    this.calculatePercent = this.calculatePercent.bind(this);
   }
 
-  // componentWillReceiveProps(props) {
-  //   this.setState({
-  //     icon: props.icon,
-  //     name: props.name,
-  //     unit: props.unit,
-  //     total: props.total,
-  //     completed: props.completed
-  //   });
-  // }
-
   increaseItem() {
-    console.log(this.state.completed, this.props.total);
     if (this.state.completed < this.state.total) {
       this.setState({completed: this.state.completed + 1});
     }
@@ -40,6 +31,10 @@ export default class HabitComponent extends Component {
     if (this.state.completed > 0) {
       this.setState({completed: this.state.completed - 1});
     }
+  }
+
+  calculatePercent() {
+    return this.state.completed / this.state.total;
   }
 
   render() {
@@ -52,20 +47,35 @@ export default class HabitComponent extends Component {
         <Icon name={this.state.icon} 
               type={this.state.type}
               style={habitStyles.icon}/>
+        <LinearGradient colors={['gray', 'lightgray']} 
+                        start={{x: 0, y: 1}}
+                        end={{ x: 0, y: 1 }}
+                        locations={[
+                          this.calculatePercent(), 
+                          this.calculatePercent()
+                        ]}
+                        style={habitStyles.linearGradient}>
         <View style={habitStyles.progressBar}>
           <View style={habitStyles.progressBarText}>
             <Text style={habitStyles.text}>{this.state.name}</Text>
           </View>
           <View style={habitStyles.progressBarButtons}>
-            <Text style={habitStyles.text}>{`${this.state.completed}/${this.state.total} ${this.state.unit}`}</Text>
+            <Text style={habitStyles.text}>{`
+              ${this.state.completed}/${this.state.total} 
+              ${this.state.unit}`}
+            </Text>
             <Icon name='add' 
+                  color={colorWhite}
                   size={17}
                   onPress={this.increaseItem} />
-            <Icon name='delete' 
+            <Icon name='remove'
+                  color={colorWhite}
+                  style={{marginLeft: 7}}
                   size={17}
                   onPress={this.decreaseItem} />
           </View>
         </View>
+        </LinearGradient>
       </View>
     )
   }

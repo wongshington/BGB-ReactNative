@@ -1,12 +1,34 @@
-import React, { Component } from "react"
+import React from "react"
 import { Text, View } from "react-native";
 import HabitComponent from "./habit_component";
 import { habitStyles } from "./_habits";
 
+// TODO: remove these once we have real habits from the DB
 const fakeHabits = [
-  {name: 'Drink water', icon: 'water-outline', type: 'material-community',total: '8', completed: '5', unit: 'cups'},
-  {name: 'Eat fruits/veggies', icon: 'water-outline', type: 'material-community', total: '3', completed: '2', unit: 'cups'},
-  {name: 'Exercise', icon: 'directions-run', total: '45', type: 'material',completed: '15', unit: 'minutes'},
+  { 
+    name: 'Drink water',
+    icon: 'water-outline',
+    type: 'material-community',
+    total: '8',
+    completed: '5',
+    unit: 'cups',
+  },
+  {
+    name: 'Eat fruits/veggies',
+    icon: 'water',
+    type: 'material-community',
+    total: '3',
+    completed: '2', 
+    unit: 'cups',
+  },
+  {
+    name: 'Exercise',
+    icon: 'directions-run',
+    total: '45',
+    type: 'material',
+    completed: '15',
+    unit: 'minutes',
+  },
 ];
 
 const HabitsComponent = () => {

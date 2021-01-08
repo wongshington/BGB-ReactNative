@@ -5,18 +5,20 @@ import HistoryComponent from "./history/history_component";
 import LibraryComponent from "./library/library_component";
 import RecommendationComponent from "./recommendation/recommendation_component";
 import ToolbarComponent from "../shared/toolbar/toolbar_component";
-
 import { homeStyles } from "./_home";
 
-const HomeComponent = () => {
-  
+const HomeComponent = ({navigation}) => {
   return (
     <View style={homeStyles.main}>
-      <HeaderComponent></HeaderComponent>
+      <HeaderComponent 
+        navigation={navigation} 
+        title='Home'
+      >
+      </HeaderComponent>
       <RecommendationComponent></RecommendationComponent>
       <HistoryComponent></HistoryComponent>
       <LibraryComponent></LibraryComponent>
-      <ToolbarComponent></ToolbarComponent>
+      <ToolbarComponent navigation={navigation}></ToolbarComponent>
     </View>
   )
 }

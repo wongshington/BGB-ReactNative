@@ -8,6 +8,8 @@ export const windowHeight = Dimensions.get('window').height;
 export const colorGray = "#979191";
 export const colorLightgray = "#c4c4c4";
 export const colorWhite = "#fff";
+export const colorPurple = "#a494e3";
+export const colorBlack = "#000";
 
 export const layoutStyles = StyleSheet.create({
   backgroundLayout: {

@@ -1,28 +1,28 @@
 import React from "react";
 import { View } from "react-native";
 import { Icon } from "react-native-elements";
-import { Link } from 'react-router-native';
 import { toolbarStyles } from "./_toolbar";
+import { colorBlack } from "../../../styles/styles";
 
-const ToolbarComponent = () => {
+const ToolbarComponent = ({navigation}) => {
   return (
     <View style={toolbarStyles.main}>
-      <Link style={toolbarStyles.homeLink}
-            to="/home">
+      <View style={toolbarStyles.homeLink}>
         <Icon
           name="home"
           size={30}
-          color="black"
+          color={colorBlack}
+          onPress={() => navigation.navigate('Home')}
         />
-      </Link>     
-      <Link style={toolbarStyles.scheduleLink}
-            to="/schedule">
+      </View>
+      <View style={toolbarStyles.scheduleLink}>
         <Icon
           name="event"
           size={30}
-          color="black"
+          color={colorBlack}
+          onPress={() => navigation.navigate('Day')}
         />
-      </Link> 
+      </View>
     </View>
   )
 }
