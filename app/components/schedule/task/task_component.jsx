@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import CircleCheckBox from 'react-native-circle-checkbox'; 
+// import CircleCheckBox from 'react-native-circle-checkbox'; 
 import {View, Text } from "react-native";
 import { Icon } from "react-native-elements";
 import { taskStyles } from "./_task";
@@ -25,13 +25,13 @@ export default class TaskComponent extends Component {
     return(
       <View style={taskStyles.main}>
         <View style={taskStyles.flex}>
-          <CircleCheckBox
+          {/* <CircleCheckBox
             checked={this.state.toggleCheckBox}
             outerColor={colorPurple}
             innerColor={colorPurple}
             onToggle={(checked) => this.setToggleCheckbox(checked)}
             styleCheckboxContainer={taskStyles.checkbox}
-          />
+          /> */}
           <Icon name={this.state.icon}
                 size={30}
                 type='material-community' 
