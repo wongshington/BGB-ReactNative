@@ -8,6 +8,7 @@ import HomeComponent from "./home/home_component";
 import DayComponent from "./day/day_component";
 import ScheduleComponent from "./schedule/schedule_component";
 import ProfileComponent from "./profile/profile_component";
+import MapComponent from "./map/map_component";
 
 const Stack = createStackNavigator();
 
@@ -19,6 +20,10 @@ const App = () => {
         headerShown: false
       }}
       >
+        <Stack.Screen
+          name="Map"
+          component={MapComponent}
+        />
         <Stack.Screen 
           name="Login" 
           component={LoginOptionsComponent}

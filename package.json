@@ -8,6 +8,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.3",
     "@react-native-community/checkbox": "^0.5.6",
     "@react-navigation/native": "^5.8.10",
     "@react-navigation/stack": "^5.12.8",
@@ -15,6 +16,7 @@
     "expo": "^39.0.5",
     "expo-linear-gradient": "~8.3.0",
     "expo-status-bar": "~1.0.2",
+    "flexbox-react": "^4.4.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.3.tar.gz",
