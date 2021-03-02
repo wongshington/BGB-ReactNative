@@ -8,7 +8,7 @@ import HomeComponent from "./home/home_component";
 import DayComponent from "./day/day_component";
 import ScheduleComponent from "./schedule/schedule_component";
 import ProfileComponent from "./profile/profile_component";
-import MapSection from './components/map/Map' // import the map here
+import MapSection from './map/Map' // import the map here
 
 const Stack = createStackNavigator();
 
@@ -20,35 +20,35 @@ const location = {
 
 const App = () => {
   return(
-    <NavigationContainer>
-      <Stack.Navigator
-      screenOptions={{
-        headerShown: false
-      }}
-      >
-        <Stack.Screen 
-          name="Login" 
-          component={LoginOptionsComponent}
-        />
-        <MapSection location={location} zoomLevel={17} /> {/* include it here */}
-        <Stack.Screen
-          name="Home"
-          component={HomeComponent}
-        />
-        <Stack.Screen 
-          name="Day" 
-          component={DayComponent}
-        />
-        <Stack.Screen 
-          name="Schedule" 
-          component={ScheduleComponent}
-        />
-        <Stack.Screen 
-          name="Profile" 
-          component={ProfileComponent}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <MapSection location={location} zoomLevel={17} /> 
+    // <NavigationContainer>
+    //   <Stack.Navigator
+    //   screenOptions={{
+    //     headerShown: false
+    //   }}
+    //   >
+    //     <Stack.Screen 
+    //       name="Login" 
+    //       component={LoginOptionsComponent}
+    //     />
+    //     <Stack.Screen
+    //       name="Home"
+    //       component={HomeComponent}
+    //     />
+    //     <Stack.Screen 
+    //       name="Day" 
+    //       component={DayComponent}
+    //     />
+    //     <Stack.Screen 
+    //       name="Schedule" 
+    //       component={ScheduleComponent}
+    //     />
+    //     <Stack.Screen 
+    //       name="Profile" 
+    //       component={ProfileComponent}
+    //     />
+    //   </Stack.Navigator>
+    // </NavigationContainer>
   )
 };
 
