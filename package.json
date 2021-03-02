@@ -8,6 +8,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@iconify/react": "^1.1.4",
     "@react-native-community/checkbox": "^0.5.6",
     "@react-navigation/native": "^5.8.10",
     "@react-navigation/stack": "^5.12.8",
@@ -15,6 +16,7 @@
     "expo": "^39.0.5",
     "expo-linear-gradient": "~8.3.0",
     "expo-status-bar": "~1.0.2",
+    "google-map-react": "^2.1.9",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.3.tar.gz",
@@ -31,7 +33,8 @@
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
-    "@babel/core": "~7.9.0"
+    "@babel/core": "~7.9.0",
+    "@iconify/icons-mdi": "^1.1.11"
   },
   "private": true
 }

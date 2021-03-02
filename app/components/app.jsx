@@ -8,8 +8,15 @@ import HomeComponent from "./home/home_component";
 import DayComponent from "./day/day_component";
 import ScheduleComponent from "./schedule/schedule_component";
 import ProfileComponent from "./profile/profile_component";
+import MapSection from './components/map/Map' // import the map here
 
 const Stack = createStackNavigator();
+
+const location = {
+  address: '1600 Amphitheatre Parkway, Mountain View, california.',
+  lat: 37.42216,
+  lng: -122.08427,
+} // our location object from earlier
 
 const App = () => {
   return(
@@ -23,6 +30,7 @@ const App = () => {
           name="Login" 
           component={LoginOptionsComponent}
         />
+        <MapSection location={location} zoomLevel={17} /> {/* include it here */}
         <Stack.Screen
           name="Home"
           component={HomeComponent}
