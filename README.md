@@ -1,3 +1,10 @@
+1) Travis CI badge 
+2) Coverage badge: <a href="https://codeclimate.com/github/jkiyasu/BGB-ReactNative/test_coverage"><img src="https://api.codeclimate.com/v1/badges/a3db8f8db379bb801682/test_coverage" /></a>
+3) CodeClimate Maintainability badge: <a href="https://codeclimate.com/github/jkiyasu/BGB-ReactNative/maintainability"><img src="https://api.codeclimate.com/v1/badges/a3db8f8db379bb801682/maintainability" /></a>
+4) Bluejay badge
+5) Pivotal Tracker: 
+
+
 This project was created using the Expo CLI Quickstart
   - https://reactnative.dev/docs/environment-setup
 
