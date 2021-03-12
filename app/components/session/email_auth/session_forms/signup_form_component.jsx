@@ -8,7 +8,7 @@ const facebookIcon = require('../../../../../assets/facebook_icon.png');
 const googleIcon = require('../../../../../assets/google_icon.png');
 
 const SignupFormComponent = ({ nextForm, user, update, activeButton }) => {
-    const properties = ['name', 'email', 'password', 'confirmPassword'];
+    const properties = ['name', 'email', 'password', 'confirm_password'];
 
     return (
         <View style={sessionFormStyles.main}>
@@ -64,7 +64,7 @@ const SignupFormComponent = ({ nextForm, user, update, activeButton }) => {
                         placeholderTextColor={"#353434"}
                         // secureTextEntry={true}
                         value={user.confirmPassword}
-                        onChangeText={update('confirmPassword')}
+                        onChangeText={update('confirm_password')}
                         style={[sessionFormStyles.input, sessionFormStyles.signupInput]}
                     />
                 </View>
