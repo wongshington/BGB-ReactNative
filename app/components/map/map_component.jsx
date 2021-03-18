@@ -27,6 +27,8 @@ const MapComponent = ({ zoomLevel }) => {
           />
         </GoogleMapReact>
       </div>
+      <div className = "otherStuff">
+    </div>
     </div>
   )
 }
