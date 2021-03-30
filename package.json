@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",
-    "@iconify/icons-mdi": "^1.1.11"
+    "@iconify/icons-mdi": "^1.1.13"
   },
   "private": true
 }
