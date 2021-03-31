@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d5cc815-cff5-4927-9010-a6141a2acb3e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,7 +13,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/app/components/map/map_component.jsx" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProjectId" id="1p35DNsR8dI8ZwnKj5yewr69QYG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -55,6 +60,9 @@
       <workItem from="1616726934553" duration="604000" />
       <workItem from="1617138753063" duration="2544000" />
       <workItem from="1617143077593" duration="439000" />
+      <workItem from="1617229020540" duration="272000" />
+      <workItem from="1617229307210" duration="701000" />
+      <workItem from="1617231015805" duration="6000" />
     </task>
     <servers />
   </component>
