@@ -5,7 +5,7 @@ import LocationPin from './LocationPin.jsx'
 import { View } from "react-native";
 import HeaderComponent from "../shared/header/header_component";
 import ToolbarComponent from "../shared/toolbar/toolbar_component";
-import { mapStyles } from "./_map";
+//import { mapStyles } from "./_map";
 import InputLabel from '@material-ui/core/InputLabel';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -32,7 +32,7 @@ const MapComponent = ({ zoomLevel, navigation}) => {
 
   return (
     <View >
-      <HeaderComponent style={mapStyles.main}
+      <HeaderComponent //style={mapStyles.main}
         navigation={navigation} 
         title='Map'
       >
@@ -114,7 +114,8 @@ const MapComponent = ({ zoomLevel, navigation}) => {
 
         ))}
 
-      <ToolbarComponent style={mapStyles.navigation} navigation={navigation}></ToolbarComponent>
+      <ToolbarComponent //style={mapStyles.navigation} 
+      navigation={navigation}></ToolbarComponent>
     </View>
   )
 }
