@@ -6,7 +6,7 @@ import { sessionFormStyles } from './_session_form';
 const facebookIcon = require('../../../../../assets/facebook_icon.png');
 const googleIcon = require('../../../../../assets/google_icon.png');
 
-const SigninFormComponent = ({ activeButton }) => {
+const SigninFormComponent = ({ activeButton, signin }) => {
     const [user, setUser] = useState({
         email: '',
         password: '',
@@ -16,7 +16,7 @@ const SigninFormComponent = ({ activeButton }) => {
 
     function handleSubmit(e) {
         e.preventDefault();
-        alert(Object.values(user));
+        signin(user);
     }
 
     function update(field) {

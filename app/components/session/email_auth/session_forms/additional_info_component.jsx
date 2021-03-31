@@ -2,11 +2,11 @@ import React from 'react'
 import { View, Text, TextInput, TouchableHighlight } from 'react-native';
 import { sessionFormStyles, additionalInfoStyles } from './_session_form';
 
-const AdditionalInfoComponent = ({ user, update, activeButton }) => {
-    const properties = ['username', 'dob', 'city'];
+const AdditionalInfoComponent = ({ user, update, activeButton, signup }) => {
+    const properties = ['username', 'date_of_birth', 'city'];
 
     function handleSubmit() {
-        alert(Object.values(user))
+        signup(user);
     }
 
     return (
@@ -34,8 +34,8 @@ const AdditionalInfoComponent = ({ user, update, activeButton }) => {
                         placeholder='date of birth'
                         placeholderTextColor={"#353434"}
                         placeholderStyle={{ fontStyle: 'italic' }}
-                        value={user.dob}
-                        onChangeText={update('dob')}
+                        value={user.date_of_birth}
+                        onChangeText={update('date_of_birth')}
                         style={[sessionFormStyles.input, sessionFormStyles.signupInput]}
                     /> 
                 </View>

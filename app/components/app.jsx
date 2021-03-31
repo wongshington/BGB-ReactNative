@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import LoginOptionsComponent from "./session/login_options_component";
-import EmailAuthComponent from './session/email_auth/email_auth_component';
+import EmailAuthContainer from './session/email_auth/email_auth_container';
 import HomeComponent from "./home/home_component";
 import DayComponent from "./day/day_component";
 import ScheduleComponent from "./schedule/schedule_component";
@@ -22,6 +22,10 @@ const App = () => {
         <Stack.Screen 
           name="Login" 
           component={LoginOptionsComponent}
+        />
+        <Stack.Screen 
+          name="Email Auth"
+          component={EmailAuthContainer}
         />
         <Stack.Screen
           name="Home"
