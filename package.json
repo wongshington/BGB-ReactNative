@@ -5,7 +5,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "build": "expo build:web"
   },
   "dependencies": {
     "@iconify/react": "^1.1.4",
@@ -36,7 +37,8 @@
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",
-    "@iconify/icons-mdi": "^1.1.11"
+    "@iconify/icons-mdi": "^1.1.11",
+    "expo-cli": "^4.3.2"
   },
   "private": true
 }
