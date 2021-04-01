@@ -14,6 +14,14 @@ import { Avatar, Card, Title, Paragraph } from 'react-native-paper';
 import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
 import Button from "@material-ui/core/Button";
+import SearchBar from "material-ui-search-bar";
+import SearchIcon from '@material-ui/icons/Search';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import InputBase from '@material-ui/core/InputBase';
+import { fade, makeStyles } from '@material-ui/core/styles';
+//import AccountCircle from "@bit/mui-org.material-ui-icons.account-circle";
 
 const LeftContent = props => <Avatar.Icon {...props} icon="folder" />
 const location = {
@@ -22,8 +30,12 @@ const location = {
     lng: -122.08427,
 }
 
+
+
+
 class MapComponent extends React.Component{
 //const MapComponent = ({ zoomLevel, navigation}) => {
+
 
     constructor() {
         super();
@@ -37,8 +49,10 @@ class MapComponent extends React.Component{
         }
 
         this.state = {
-            resource:false
+            resource:false,
+            dataSource: ''
         }
+
 
         this.updateResourceToTrue = this.updateResourceToTrue.bind(this)
         this.updateResourceToFalse = this.updateResourceToFalse.bind(this)
@@ -55,7 +69,10 @@ class MapComponent extends React.Component{
             resource:false});
     }
 
+
+
     mapContent(address, location) {
+
 
         return(
 
@@ -148,8 +165,10 @@ class MapComponent extends React.Component{
 
     render(){
 
+
         const resource = this.state.resource;
         const address = this.address.addr;
+        const classes = this.classes;
         let header;
 
         if(resource) {
@@ -167,14 +186,69 @@ class MapComponent extends React.Component{
 
         return (
             <View >
-                <HeaderComponent style={mapStyles.main}
-                                 navigation={navigation}
-                                 title='Map'
-                >
-                </HeaderComponent>
+                {/*<HeaderComponent style={mapStyles.main}*/}
+                {/*                 navigation={navigation}*/}
+                {/*                 title='Map'*/}
+                {/*>*/}
+                {/*    <SearchBar style={mapStyles.search}*/}
+                {/*        dataSource={this.state.dataSource}*/}
+                {/*        //onChange={(value) => setState({dataSource: [ value, value+value, value+value+value]})}*/}
+                {/*        onRequestSearch={() => console.log('onRequestSearch')}*/}
+                {/*        style={{*/}
+                {/*            margin: '0 auto',*/}
+                {/*            maxWidth: 800*/}
+                {/*        }}*/}
+                {/*    />*/}
+
+
+
+
+                {/*</HeaderComponent>*/}
+
+                <div>
+
+                </div>
+
+
+
+
+
+                <AppBar position="static" style={{ marginTop: 1}}>
+                    <Toolbar  style={{ backgroundColor: "darknavy", color: "darknavy"}}>
+                        <div >
+                            <Grid container direction="row"
+                                  justify="center">
+                                <div >
+                                    <AccountCircle
+                                        fontSize="inherit"
+                                        style={{ fontSize: "100px" }}
+                                    />
+                                </div>
+                                <Divider orientation="vertical" flexItem />
+                                <SearchBar style={mapStyles.search}
+                                           dataSource={this.state.dataSource}
+                                    //onChange={(value) => setState({dataSource: [ value, value+value, value+value+value]})}
+                                           onRequestSearch={() => console.log('onRequestSearch')}
+                                           style={{
+                                               margin: '25px',
+                                               maxWidth: 800,
+                                               justify:'centerPoint'
+
+                                           }}
+
+                                />
+                            </Grid>
+
+
+                        </div>
+
+                    </Toolbar>
+                </AppBar>
+
+
 
                 <Grid container direction="row"
-                      justify="center">
+                      justify="center" style={{marginTop:'25px', marginBottom:'25px'}}>
 
                     <Button onClick={this.updateResourceToFalse}>map</Button>
                     <Divider orientation="vertical" flexItem />

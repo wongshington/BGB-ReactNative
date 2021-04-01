@@ -20,5 +20,23 @@ export const mapStyles = StyleSheet.create({
         justifyContent: "row",
 
 
+    },
+    inputRoot: {
+        color: 'inherit',
+    },
+    inputInput: {
+
+        // vertical padding + font size from searchIcon
+
+
+
+    },
+
+    search: {
+        color: 'systemColorWhite',
+        backgroundColor:'white',
+        justifyContent:"center",
+
     }
+
 });
