@@ -225,7 +225,7 @@ class MapComponent extends React.Component{
                                     />
                                 </div>
                                 <Divider orientation="vertical" flexItem />
-                                <SearchBar style={mapStyles.search}
+                                <SearchBar // style={mapStyles.search}
                                            dataSource={this.state.dataSource}
                                     //onChange={(value) => setState({dataSource: [ value, value+value, value+value+value]})}
                                            onRequestSearch={() => console.log('onRequestSearch')}
@@ -258,7 +258,8 @@ class MapComponent extends React.Component{
 
                 <div>{header}</div>
 
-                <ToolbarComponent style={mapStyles.navigation} navigation={navigation}></ToolbarComponent>
+                <ToolbarComponent //style={mapStyles.navigation} 
+                navigation={navigation}></ToolbarComponent>
             </View>
         )
     }
