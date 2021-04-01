@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d5cc815-cff5-4927-9010-a6141a2acb3e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/components/map/_map.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/map/map_component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/map/map_component.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +64,10 @@
       <workItem from="1617229020540" duration="272000" />
       <workItem from="1617229307210" duration="701000" />
       <workItem from="1617231015805" duration="6000" />
+      <workItem from="1617231024043" duration="80000" />
+      <workItem from="1617231199748" duration="1542000" />
+      <workItem from="1617233105388" duration="1736000" />
+      <workItem from="1617234918904" duration="1442000" />
     </task>
     <servers />
   </component>
