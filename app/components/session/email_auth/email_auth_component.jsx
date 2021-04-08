@@ -8,18 +8,18 @@ import AdditionalInfoComponent from './session_forms/additional_info_component';
 
 const background = require('../../../../assets/auth_background.png');
 
-const EmailAuthComponent = ({ match: { params }}) => {
+const EmailAuthComponent = ({ route: { params }, signup, signin }) => {
     const [formType, setFormType] = useState(params.formType);
     const [user, setUser] = useState({
         name: '',
         email: '',
         password: '',
-        confirmPassword: '',
+        confirm_password: '',
         username: '',
-        dob: '',
+        date_of_birth: '',
         city: ''
     });
-
+    
     function update(field) {
         return (value) => setUser({ ...user, [field]: value });
     }
@@ -64,6 +64,7 @@ const EmailAuthComponent = ({ match: { params }}) => {
                 update={update}
                 nextForm={() => setFormType('signup')}
                 activeButton={activeButton}
+                signup={signup}
             />;
             line = null;
 
@@ -74,7 +75,10 @@ const EmailAuthComponent = ({ match: { params }}) => {
             break;
         case 'signin':
             signinActive = 'active';
-            form = <SigninFormComponent activeButton={activeButton}/>;
+            form = <SigninFormComponent 
+                    activeButton={activeButton}
+                    signin={signin}
+                />;
             break;                       
     }
 

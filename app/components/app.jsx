@@ -4,7 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { Provider as PaperProvider } from 'react-native-paper';
 
 import LoginOptionsComponent from "./session/login_options_component";
-import EmailAuthComponent from './session/email_auth/email_auth_component';
+import EmailAuthContainer from './session/email_auth/email_auth_container';
 import HomeComponent from "./home/home_component";
 import ProfileComponent from "./profile/profile_component";
 import SettingsComponent from "./settings/settings_component";
@@ -26,6 +26,10 @@ const App = () => (
       <Stack.Screen 
         name="Login" 
         component={LoginOptionsComponent}
+      />
+      <Stack.Screen 
+        name="Email Auth"
+        component={EmailAuthContainer}
       />
       <Stack.Screen
         name="Home"
