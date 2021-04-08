@@ -3,8 +3,6 @@ import { windowHeight, windowWidth } from "../../styles/styles";
 
 export const homeStyles = StyleSheet.create({
   main: {
-    height: windowHeight,
-    width: windowWidth,
-    flex: 1,
+    height: windowHeight - 200,
   },
 });
