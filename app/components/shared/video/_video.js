@@ -18,7 +18,7 @@ const feelings = [
   'Defeated',
 ];
 
-const CheckinComponent = ({ navigation, checkin }) => {
+const CheckinComponent = ({ navigation, title }) => {
   return (
     <View>
       <HeaderComponent 
@@ -28,29 +28,11 @@ const CheckinComponent = ({ navigation, checkin }) => {
       </HeaderComponent>
       <View style={ checkinStyles.main }>
         <Text style={ checkinStyles.text }>
-          { checkin ? 'Check in with yourself' : 'Check out' }
+          Daily Videos
         </Text>
         <Text style={ checkinStyles.textLarge }>
-          How do you feel right now?
+          { title }
         </Text>
-        <View style={ checkinStyles.buttons }>
-            {feelings.map((label, key) => {
-              return (
-                <FeelingButtonComponent
-                  label={ label }
-                  key={ key }
-                >
-                </FeelingButtonComponent>
-              );
-            })}
-        </View>
-        <Button 
-          mode="contained"
-          style={ checkinStyles.continue } 
-          labelStyle={ checkinStyles.labelStyle }
-          onPress={ () => console.log('Pressed') }>
-            Continue
-        </Button>
       </View>
     </View>
   );

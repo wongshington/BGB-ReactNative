@@ -5,7 +5,7 @@ import { infopageStyles } from './_infopage';
 import { windowWidth } from '../../styles/styles';
 import ToolbarComponent from '../shared/toolbar/toolbar_component';
 import HeaderComponent from '../shared/header/header_component';
-import CardComponent from '../shared/card/card_component';
+import GridComponent from '../shared/grid/grid_component';
 import ListItemComponent from '../shared/list_item/list_item_component';
 
 const topics = {
@@ -25,6 +25,12 @@ const topics = {
     title: 'Daily Exercises',
   },
 };
+
+// TODO: remove this once we have backend implemented
+const fakeLibrary = [
+  {title: 'How to Meditate', content: 'a quick and easy meditation guide"'},
+  {title: 'How to Meditate', content: 'a quick and easy meditation guide"'},
+];
 
 const InfopageComponent = ({ navigation, route }) => (
   <View>
@@ -69,23 +75,13 @@ const InfopageComponent = ({ navigation, route }) => (
       <Text style={ [infopageStyles.header, infopageStyles.font] }>
         Guides
       </Text>
-      <CardComponent
+      <GridComponent 
+        elements={ fakeLibrary }
+        cardHeight={ windowWidth/3 }
+        cardWidth={ windowWidth/3 }
         navigation={ navigation }
-        title="How to Meditate"
-        content="a quick and easy meditation guide"
-        cardWidth={windowWidth/3}
-        cardHeight={windowWidth/3}
       >
-      </CardComponent>
-      <CardComponent
-        navigation={ navigation }
-        title="How to Meditate"
-        content="a quick and easy meditation guide"
-        cardWidth={windowWidth/3}
-        cardHeight={windowWidth/3}
-      >
-      </CardComponent>
-
+      </GridComponent>
     </View>
     <ToolbarComponent navigation={ navigation }></ToolbarComponent>
   </View>
