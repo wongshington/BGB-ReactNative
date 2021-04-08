@@ -3,12 +3,7 @@ import { windowWidth } from "../../../styles/styles";
 
 export const cardStyles = StyleSheet.create({
  main: {
-  //  height: 200, 
-  //  width: windowWidth - 60,
    marginTop: 10, 
-  //  marginBottom: 10,
-  //  marginLeft: 30,
-  //  marginRight: 30,
    borderRadius: 10,
    shadowOffset: { width: 0, height: 2 },
    shadowOpacity: 0.3,
@@ -21,7 +16,8 @@ export const cardStyles = StyleSheet.create({
   layout: {
    display: 'flex',
    justifyContent: 'center',
-  //  height: 200,
+   height: '100%',
+   width: '100%',
   },
 
   button: {
@@ -31,17 +27,17 @@ export const cardStyles = StyleSheet.create({
     transform: [{rotate: "30deg"}],
   },
 
+  link: {
+    width: '100%',
+  },
+
   title: {
-    // fontStyle: 'normal',
-    // fontWeight: 'normal',
     fontSize: 21,
     lineHeight: 25,
     color: '#ffffff',
   },
 
   content: {
-    // fontStyle: 'normal',
-    // fontWeight: 'normal',
     fontSize: 16,
     lineHeight: 19,
     color: '#dbd3f9',

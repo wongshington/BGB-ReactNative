@@ -7,9 +7,10 @@ export const infoStyles = StyleSheet.create({
     height: windowHeight - 200,
   },
 
-  scrollview: {
+  scrollView: {
     display: 'flex', 
     alignItems: 'center',
+    margin: 20,
   },
   
   text: {
@@ -19,7 +20,15 @@ export const infoStyles = StyleSheet.create({
     lineHeight: 18,
     textAlign: 'center',
     color: '#444141',
-    margin: 40,
+    margin: 20,
     marginTop: 0,
+  },
+
+  cardContainer: {
+    marginBottom: 20,
+  },
+
+  card: {
+    height: 100,
   }
 })

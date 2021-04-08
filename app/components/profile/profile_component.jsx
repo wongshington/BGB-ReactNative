@@ -55,6 +55,7 @@ const ProfileComponent = ({ navigation, route }) => {
                 elements={ fakeElements }
                 cardHeight={ windowWidth/4 }
                 cardWidth={ windowWidth/4 }
+                cardColor={ "#7d8fd1" }
                 navigation={ navigation }
               >
               </GridComponent>
@@ -65,6 +66,7 @@ const ProfileComponent = ({ navigation, route }) => {
                 elements={ fakeElements }
                 cardHeight={ windowWidth/4 }
                 cardWidth={ windowWidth/4 }
+                cardColor={ "#7d8fd1" }
                 navigation={ navigation }
               >
               </GridComponent>
@@ -75,6 +77,7 @@ const ProfileComponent = ({ navigation, route }) => {
                 elements={ fakeElements }
                 cardHeight={ windowWidth/4 }
                 cardWidth={ windowWidth/4 }
+                cardColor={ "#7d8fd1" }
                 navigation={ navigation }
               >
               </GridComponent>

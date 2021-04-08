@@ -53,16 +53,18 @@ export default class RecommendationComponent extends Component{
         >
           {fakeRecs.map((_, key) => {
             return (
-              <View style={ recommendationStyles.container }>
-              <CardComponent 
-                key={ key } 
-                title="Exercise"
-                content="descript..."
-                cardHeight="100%"
-                cardWidth={ windowWidth/4 }
-                navigation={ this.props.navigation }
-              >
-              </CardComponent>
+              <View 
+                key={ key }
+                style={ recommendationStyles.container }>
+                <CardComponent 
+                  title="Exercise"
+                  content="descript..."
+                  cardHeight="100%"
+                  cardColor={ "#7d8fd1" }
+                  cardWidth={ windowWidth/4 }
+                  navigation={ this.props.navigation }
+                >
+                </CardComponent>
               </View>
             );
           })}

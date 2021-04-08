@@ -24,6 +24,7 @@ const LibraryComponent = ({ navigation }) => {
         elements={ fakeLibrary }
         cardHeight={ windowWidth/4 }
         cardWidth={ windowWidth/4 }
+        cardColor={ "#7d8fd1" }
         navigation={ navigation }
       >
       </GridComponent>

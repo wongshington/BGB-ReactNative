@@ -7,10 +7,10 @@ import { ScrollView, Text, View } from "react-native";
 import { infoStyles } from './_info';
 
 const topics = [
-  {title: "Meditation", content: "Learn how to meditate."},
-  {title: "Hair Care", content: "Tips, tricks, and guides to keep up with your curls."},
-  {title: "Exercise", content: "Tips on fun exercies to do in your room."},
-  {title: "Exercise", content: "Tips on fun exercies to do in your room."},
+  {title: "Meditation", content: "Learn how to meditate.", color: "#7d8fd1"},
+  {title: "Hair Care", content: "Tips, tricks, and guides to keep up with your curls.", color: "#a494e3"},
+  {title: "Exercise", content: "Tips on fun exercies to do in your room.", color: "#077641"},
+  {title: "Exercise", content: "Tips on fun exercies to do in your room.", color: "#7d8fd1"},
 ];
 
 const InfoComponent = ({ navigation }) => {
@@ -27,15 +27,20 @@ const InfoComponent = ({ navigation }) => {
           Find videos, guides and tutorials on different methods 
           of self care.
         </Text>
-        <ScrollView contentContainerStyle={ infoStyles.ScrollView }>
+       
+        <ScrollView contentContainerStyle={ infoStyles.scrollView }>
           {topics.map((prop, key) => {
             return (
-              <CardComponent
-                title={ prop.title }
-                content={ prop.content }
-                key={ key }
-                navigation={ navigation }
-              ></CardComponent>
+              <View key={ key } style={ infoStyles.cardContainer }>
+                <CardComponent
+                  title={ prop.title }
+                  content={ prop.content }
+                  navigation={ navigation }
+                  cardHeight={ 200 }
+                  cardWidth={ '100%' }
+                  cardColor={ prop.color }
+                ></CardComponent>
+              </View>
             );
           })}
         </ScrollView>
