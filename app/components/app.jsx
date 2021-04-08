@@ -23,10 +23,10 @@ const App = () => (
       headerShown: false
     }}
     >
-      {/* <Stack.Screen 
+      <Stack.Screen 
         name="Login" 
         component={LoginOptionsComponent}
-      /> */}
+      />
       <Stack.Screen
         name="Home"
         component={HomeComponent}
