@@ -15,9 +15,8 @@ install:
   - npm install -g react-native-cli #install react
   - npm install -g yarn #install yarn
 
-
 script:
-  - yarn test #run the tests (could be npm test)
+  - npm test #run the tests (could be npm test)
 
 # pipe to CC
 after_script:
