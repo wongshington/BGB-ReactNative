@@ -6,7 +6,11 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
+<<<<<<< HEAD
     "build": "expo build:web"
+=======
+    "test": "echo \"No tests yet.\""
+>>>>>>> 5096eb02e177adea95ee15d4b8bce428f84be5ea
   },
   "dependencies": {
     "@iconify/react": "^1.1.4",
@@ -31,19 +35,12 @@
     "react-native-gesture-handler": "^1.10.3",
     "react-native-image-picker": "^3.0.0",
     "react-native-linear-gradient": "^2.5.6",
-<<<<<<< HEAD
-    "react-native-paper": "^4.7.2",
-    "react-native-screens": "^2.17.1",
-    "react-native-vector-icons": "^8.1.0",
-    "react-native-web": "^0.13.18",
-=======
     "react-native-material-buttons": "^0.6.0",
     "react-native-material-tabs": "^4.1.2",
     "react-native-paper": "^4.6.0",
     "react-native-vector-icons": "^7.1.0",
     "react-native-video": "^5.1.1",
     "react-native-web": "~0.13.12",
->>>>>>> 912a1c35de0163f9eefeb10b46c0b5224559280c
     "react-redux": "^7.2.1",
     "react-router-native": "^5.2.0",
     "redux": "^4.0.5",
