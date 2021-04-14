@@ -1,20 +1,17 @@
 import React from "react";
-import { TouchableHighlight, View, Text } from "react-native";
+import { Appbar } from 'react-native-paper';
 import { headerStyles } from "./_header";
 
-// TODO: Update the Profile name to the actual user once connected
-// to the DB
-const HeaderComponent = ({navigation, title}) => {
+const HeaderComponent = ({ navigation, title }) => {
   return (
-    <View style={headerStyles.main}>
-      <TouchableHighlight 
-        style={headerStyles.profileLink} 
-        onPress={() => navigation.navigate('Profile', {name: 'LB'})}
+    <Appbar.Header style={ headerStyles.main }>
+      <Appbar.BackAction onPress={ () => navigation.goBack() }/>
+      <Appbar.Content 
+        title={ title }
+        titleStyle={ headerStyles.title }
       >
-        <Text></Text>
-      </TouchableHighlight>
-      <Text style={headerStyles.title}>{title}</Text>
-    </View>
+      </Appbar.Content>
+    </Appbar.Header>
   )
 }
 

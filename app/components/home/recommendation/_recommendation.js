@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { colorLightgray, colorGray, windowWidth } from "../../../styles/styles";
+import { colorLightgray, colorGray } from "../../../styles/styles";
 
 export const recommendationStyles = StyleSheet.create({
   main: {
@@ -8,25 +8,17 @@ export const recommendationStyles = StyleSheet.create({
     padding: 20,
   },
 
-  recommendationTitle: {
+  title: {
     color: colorGray,
+    marginBottom: 20,
   },
 
-  recommendationContainer: {
+  container: {
     margin: 10,
   },
 
-  recommendationElement: {
-    width: windowWidth/4.5,
-    height: '70%',
+  card: {
     margin: 10,
-    backgroundColor: colorGray,
-  },
-
-  currentRecommendationElement: {
-    width: windowWidth/4,
-    height: '80%',
-    margin: 10,
-    backgroundColor: colorGray,
+    padding: 10,
   },
 });

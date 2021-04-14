@@ -2,17 +2,18 @@ import React, { Component } from "react";
 import { ScrollView, Text, View } from "react-native";
 import { recommendationStyles } from "./_recommendation";
 import { windowWidth } from "../../../styles/styles";
+import CardComponent from "../../shared/card/card_component";
 
 // TODO: remove once we get data from DB
 const fakeRecs = [
-  {name: 'recommendation 1'},
-  {name: 'recommendation 2'},
-  {name: 'recommendation 3'},
-  {name: 'recommendation 4'},
-  {name: 'recommendation 5'},
-  {name: 'recommendation 6'},
-  {name: 'recommendation 7'},
-  {name: 'recommendation 8'},
+  {title: 'Exercise', content: 'This is a description.'},
+  {title: 'Exercise', content: 'This is a description.'},
+  {title: 'Exercise', content: 'This is a description.'},
+  {title: 'Exercise', content: 'This is a description.'},
+  {title: 'Exercise', content: 'This is a description.'},
+  {title: 'Exercise', content: 'This is a description.'},
+  {title: 'Exercise', content: 'This is a description.'},
+  {title: 'Exercise', content: 'This is a description.'},
 ];
 
 const elWidth = windowWidth / 4.5;
@@ -37,25 +38,31 @@ export default class RecommendationComponent extends Component{
 
   render() {
     return (
-      <View style={recommendationStyles.main}>
-        <Text style={recommendationStyles.recommendationTitle}>
+      <View style={ recommendationStyles.main }>
+        <Text style={ recommendationStyles.title }>
           Your Recommendations
         </Text>
-        <ScrollView horizontal
-                    pagingEnabled
-                    showsHorizontalScrollIndicator={false}
-                    onScroll={this.handleScroll}
-                    scrollEventThrottle={16}
-                    centerContent
-                    style={recommendationStyles.recommendationContainer}>
+        <ScrollView 
+          horizontal
+          pagingEnabled
+          showsHorizontalScrollIndicator={ false }
+          onScroll={ this.handleScroll }
+          scrollEventThrottle={ 16 }
+          centerContent
+          style={ recommendationStyles.containter }
+        >
           {fakeRecs.map((_, key) => {
             return (
-              <View style={[
-                      key === this.state.currentEl ?
-                      recommendationStyles.currentRecommendationElement 
-                      : recommendationStyles.recommendationElement
-                    ]}
-                    key={key}>
+              <View style={ recommendationStyles.container }>
+              <CardComponent 
+                key={ key } 
+                title="Exercise"
+                content="descript..."
+                cardHeight="100%"
+                cardWidth={ windowWidth/4 }
+                navigation={ this.props.navigation }
+              >
+              </CardComponent>
               </View>
             );
           })}
