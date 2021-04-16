@@ -1,29 +1,37 @@
 import React from "react";
-import { View } from "react-native";
-import { Icon } from "react-native-elements";
 import { toolbarStyles } from "./_toolbar";
-import { colorBlack } from "../../../styles/styles";
+import { Appbar } from 'react-native-paper';
 
-const ToolbarComponent = ({navigation}) => {
+const ToolbarComponent = ({ navigation }) => {
   return (
-    <View style={toolbarStyles.main}>
-      <View style={toolbarStyles.homeLink}>
-        <Icon
-          name="home"
-          size={30}
-          color={colorBlack}
-          onPress={() => navigation.navigate('Home')}
-        />
-      </View>
-      <View style={toolbarStyles.scheduleLink}>
-        <Icon
-          name="event"
-          size={30}
-          color={colorBlack}
-          onPress={() => navigation.navigate('Day')}
-        />
-      </View>
-    </View>
+    <Appbar.Header style={ toolbarStyles.main }>
+      <Appbar.Action 
+        icon="heart-outline"
+        color="#8a8a8a"
+        mode="outlined" 
+        onPress={ () => navigation.navigate('Profile', {name: 'Test User'}) } 
+      />
+      <Appbar.Action 
+        icon="home-outline" 
+        color="#8a8a8a"
+        onPress={ () => navigation.navigate('Home') } 
+      />
+      <Appbar.Action 
+        icon="account-outline"
+        color="#8a8a8a"
+        onPress={ () => navigation.navigate('Settings') } 
+      />
+      <Appbar.Action 
+        icon="brain"
+        color="#8a8a8a"
+        onPress={ () => navigation.navigate('Info') } 
+      />
+      <Appbar.Action 
+        icon="map-marker" 
+        color="#8a8a8a"
+        onPress={ () => navigation.navigate('Resources') } 
+      />
+    </Appbar.Header>
   )
 }
 

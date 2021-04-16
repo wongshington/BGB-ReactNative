@@ -7,18 +7,21 @@ import RecommendationComponent from "./recommendation/recommendation_component";
 import ToolbarComponent from "../shared/toolbar/toolbar_component";
 import { homeStyles } from "./_home";
 
-const HomeComponent = ({navigation}) => {
+const HomeComponent = ({ navigation }) => {
   return (
-    <View style={homeStyles.main}>
+    <View>
       <HeaderComponent 
-        navigation={navigation} 
+        navigation={ navigation } 
         title='Home'
       >
       </HeaderComponent>
-      <RecommendationComponent></RecommendationComponent>
-      <HistoryComponent></HistoryComponent>
-      <LibraryComponent></LibraryComponent>
-      <ToolbarComponent navigation={navigation}></ToolbarComponent>
+      <View  style={homeStyles.main}>
+        <RecommendationComponent navigation={ navigation }>
+        </RecommendationComponent>
+        <HistoryComponent></HistoryComponent>
+        <LibraryComponent navigation={ navigation }></LibraryComponent>
+      </View>
+      <ToolbarComponent navigation={ navigation }></ToolbarComponent>
     </View>
   )
 }

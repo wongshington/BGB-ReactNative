@@ -5,7 +5,7 @@ import LocationPin from './LocationPin.jsx'
 import { View } from "react-native";
 import HeaderComponent from "../shared/header/header_component";
 import ToolbarComponent from "../shared/toolbar/toolbar_component";
-import { mapStyles } from "./_map";
+//import { mapStyles } from "./_map";
 import InputLabel from '@material-ui/core/InputLabel';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -225,7 +225,7 @@ class MapComponent extends React.Component{
                                     />
                                 </div>
                                 <Divider orientation="vertical" flexItem />
-                                <SearchBar style={mapStyles.search}
+                                <SearchBar // style={mapStyles.search}
                                            dataSource={this.state.dataSource}
                                     //onChange={(value) => setState({dataSource: [ value, value+value, value+value+value]})}
                                            onRequestSearch={() => console.log('onRequestSearch')}
@@ -258,7 +258,8 @@ class MapComponent extends React.Component{
 
                 <div>{header}</div>
 
-                <ToolbarComponent style={mapStyles.navigation} navigation={navigation}></ToolbarComponent>
+                <ToolbarComponent //style={mapStyles.navigation} 
+                navigation={navigation}></ToolbarComponent>
             </View>
         )
     }

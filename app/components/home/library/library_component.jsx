@@ -1,37 +1,32 @@
 import React from "react";
-import { ScrollView, Text, View } from "react-native";
+import { Text, View } from "react-native";
+import { windowWidth } from "../../../styles/styles";
+import GridComponent from "../../shared/grid/grid_component";
 import { libraryStyles } from "./_library";
 
 // TODO: remove this once we have backend implemented
 const fakeLibrary = [
-  {name: 'saved item 1'},
-  {name: 'saved item 2'},
-  {name: 'saved item 3'},
-  {name: 'saved item 4'},
-  {name: 'saved item 5'},
-  {name: 'saved item 6'},
-  {name: 'saved item 7'},
-  {name: 'saved item 8'},
+  {title: 'Exercise', content: 'This is a description.'},
+  {title: 'Exercise', content: 'This is a description.'},
+  {title: 'Exercise', content: 'This is a description.'},
+  {title: 'Exercise', content: 'This is a description.'},
+  {title: 'Exercise', content: 'This is a description.'},
+  {title: 'Exercise', content: 'This is a description.'},
+  {title: 'Exercise', content: 'This is a description.'},
+  {title: 'Exercise', content: 'This is a description.'},
 ];
 
-const LibraryComponent = () => {
+const LibraryComponent = ({ navigation }) => {
   return (
-    <View style={libraryStyles.main}>
-      <Text style={libraryStyles.titleText}>My Library</Text>
-      <ScrollView horizontal={ false } 
-                  showsVerticalScrollIndicator={ false }
-                  style={libraryStyles.scrollView}>
-        
-        <View style={libraryStyles.libraryContainer}>
-          {fakeLibrary.map((_, key) => {
-            return (
-              <View style={libraryStyles.libraryElement} 
-                    key={key}>
-              </View>
-            );
-          })}
-        </View>
-      </ScrollView>
+    <View style={ libraryStyles.main }>
+      <Text style={ libraryStyles.titleText }>My Library</Text>
+      <GridComponent 
+        elements={ fakeLibrary }
+        cardHeight={ windowWidth/4 }
+        cardWidth={ windowWidth/4 }
+        navigation={ navigation }
+      >
+      </GridComponent>
     </View>
   )
 }

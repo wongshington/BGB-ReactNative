@@ -1,17 +1,15 @@
 import React from "react";
-import { Text, View } from "react-native";
 import { historyStyles } from "./_history";
+import { Card, Title, Paragraph } from 'react-native-paper';
 
 const HistoryComponent = () => {
   return (
-    <View style={historyStyles.main}>
-      <Text style={historyStyles.dateText}>
-        July 25:
-      </Text>
-      <Text style={historyStyles.historyText}>
-        History here
-      </Text>
-    </View>
+    <Card>
+    <Card.Content>
+      <Title style={historyStyles.title}>July 25</Title>
+      <Paragraph>This is a bunch of important history</Paragraph>
+    </Card.Content>
+  </Card>
   )
 }
 

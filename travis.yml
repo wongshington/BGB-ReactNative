@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+  - "node"
+
+env:
+  global:
+  - CC_TEST_REPORTER_ID=25003bc141498974e0a3d6cec887ce2a1af074236cd4f7fe0b37c13ab34bbc99
+
+before_install: 
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+
+install:
+  - npm ci #install node js
+  - npm install -g react-native-cli #install react
+  - npm install -g yarn #install yarn
+
+script:
+  - npm test #run the tests (could be npm test)
+
+# pipe to CC
+after_script:
+  - ./cc-test-reporter after-build  --exit-code $TRAVIS_TEST_RESULT
