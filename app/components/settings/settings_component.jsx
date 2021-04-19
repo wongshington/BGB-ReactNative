@@ -5,10 +5,12 @@ import ToolbarComponent from "../shared/toolbar/toolbar_component";
 import { settingsStyles } from "./_settings";
 
 const SettingsComponent = ({ navigation }) => {
+  const headerTitle = "Settings";
+
   return (
     <View>
       <HeaderComponent 
-        title={ "Settings" }
+        title={ headerTitle }
         navigation={ navigation }
       >
       </HeaderComponent>
@@ -19,4 +21,4 @@ const SettingsComponent = ({ navigation }) => {
   )
 }
 
-export default SettingsComponent
+export default SettingsComponent;

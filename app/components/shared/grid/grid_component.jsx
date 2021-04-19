@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { ScrollView, View } from "react-native";
 import CardComponent from "../card/card_component";
 import { gridStyles } from "./_grid";
-import { windowWidth } from "../../../styles/styles";
 
 export default class GridComponent extends Component { 
   constructor(props) {
@@ -33,7 +32,9 @@ export default class GridComponent extends Component {
                   content={ el.content }
                   cardHeight={ this.props.cardHeight }
                   cardWidth={ this.props.cardWidth }
+                  cardImage={ el.image }
                   navigation={ this.props.navigation }
+                  guide={ this.props.guide }
                 >
                 </CardComponent>
               </View>

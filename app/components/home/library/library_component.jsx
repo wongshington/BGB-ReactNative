@@ -6,14 +6,51 @@ import { libraryStyles } from "./_library";
 
 // TODO: remove this once we have backend implemented
 const fakeLibrary = [
-  {title: 'Exercise', content: 'This is a description.'},
-  {title: 'Exercise', content: 'This is a description.'},
-  {title: 'Exercise', content: 'This is a description.'},
-  {title: 'Exercise', content: 'This is a description.'},
-  {title: 'Exercise', content: 'This is a description.'},
-  {title: 'Exercise', content: 'This is a description.'},
-  {title: 'Exercise', content: 'This is a description.'},
-  {title: 'Exercise', content: 'This is a description.'},
+  {
+    title: 'Hair Care', 
+    content: 'thing 1', 
+    image: require("../../../../assets/meditation.png")
+  },
+  {
+    title: 'Hair Care', 
+    content: 'thing 2', 
+    image: require("../../../../assets/meditation.png"),
+  },
+  {
+    title: 'Hair Care', 
+    content: 'thing 3', 
+    image: require("../../../../assets/meditation.png"),
+  },
+  {
+    title: 'Hair Care', 
+    content: 'thing 4', 
+    image: require("../../../../assets/meditation.png"),
+  },
+  {
+    title: 'Hair Care', 
+    content: 'thing 5', 
+    image: require("../../../../assets/meditation.png"),
+  },
+  {
+    title: 'Hair Care', 
+    content: 'thing 6', 
+    image: require("../../../../assets/meditation.png"),
+  },
+  {
+    title: 'Hair Care', 
+    content: 'thing 7', 
+    image: require("../../../../assets/meditation.png"),
+  },
+  {
+    title: 'Hair Care', 
+    content: 'thing 8', 
+    image: require("../../../../assets/meditation.png"),
+  },
+  {
+    title: 'Hair Care', 
+    content: 'thing 9', 
+    image: require("../../../../assets/meditation.png"),
+  },
 ];
 
 const LibraryComponent = ({ navigation }) => {
@@ -31,4 +68,4 @@ const LibraryComponent = ({ navigation }) => {
   )
 }
 
-export default LibraryComponent
+export default LibraryComponent;

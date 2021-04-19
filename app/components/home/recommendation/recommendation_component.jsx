@@ -6,17 +6,50 @@ import CardComponent from "../../shared/card/card_component";
 
 // TODO: remove once we get data from DB
 const fakeRecs = [
-  {title: 'Exercise', content: 'This is a description.'},
-  {title: 'Exercise', content: 'This is a description.'},
-  {title: 'Exercise', content: 'This is a description.'},
-  {title: 'Exercise', content: 'This is a description.'},
-  {title: 'Exercise', content: 'This is a description.'},
-  {title: 'Exercise', content: 'This is a description.'},
-  {title: 'Exercise', content: 'This is a description.'},
-  {title: 'Exercise', content: 'This is a description.'},
+  {
+    title: 'Exercise', 
+    content: 'rec 1', 
+    image: require( "../../../../assets/plant.png"),
+  },
+  {
+    title: 'Exercise', 
+    content: 'rec 2', 
+    image: require( "../../../../assets/plant.png"),
+  },
+  {
+    title: 'Exercise', 
+    content: 'rec 3', 
+    image: require( "../../../../assets/plant.png"),
+  },
+  {
+    title: 'Exercise', 
+    content: 'rec 4', 
+    image: require( "../../../../assets/plant.png"),
+  },
+  {
+    title: 'Exercise', 
+    content: 'rec 5', 
+    image: require( "../../../../assets/plant.png"),
+  },
+  {
+    title: 'Exercise', 
+    content: 'rec 6', 
+    image: require( "../../../../assets/plant.png"),
+  },
+  {
+    title: 'Exercise', 
+    content: 'rec 7', 
+    image: require( "../../../../assets/plant.png"),
+  },
+  {
+    title: 'Exercise', 
+    content: 'rec 8', 
+    image: require( "../../../../assets/plant.png"),
+  },
 ];
 
-const elWidth = windowWidth / 4.5;
+const elWidth = windowWidth/4.5;
+const cardWidth = windowWidth/4;
 
 export default class RecommendationComponent extends Component{
   constructor(props) {
@@ -28,9 +61,9 @@ export default class RecommendationComponent extends Component{
     this.handleScroll = this.handleScroll.bind(this);
   }
 
-  // TODO: this is not ideal. Fix it.
   handleScroll(event) {
-    const currentEl = Math.floor(event.nativeEvent.contentOffset.x / elWidth) + 1;
+    const currentEl = Math.floor(
+      event.nativeEvent.contentOffset.x / elWidth) + 1;
     if (this.state.currentEl !== currentEl){
       this.setState({currentEl: currentEl});
     }
@@ -51,18 +84,20 @@ export default class RecommendationComponent extends Component{
           centerContent
           style={ recommendationStyles.containter }
         >
-          {fakeRecs.map((_, key) => {
+          {fakeRecs.map((rec, key) => {
             return (
-              <View style={ recommendationStyles.container }>
-              <CardComponent 
-                key={ key } 
-                title="Exercise"
-                content="descript..."
-                cardHeight="100%"
-                cardWidth={ windowWidth/4 }
-                navigation={ this.props.navigation }
-              >
-              </CardComponent>
+              <View 
+                key={ key }
+                style={ recommendationStyles.container }>
+                <CardComponent 
+                  title={ rec.title }
+                  content={ rec.content }
+                  cardHeight="100%"
+                  cardImage={ rec.image }
+                  cardWidth={ cardWidth }
+                  navigation={ this.props.navigation }
+                >
+                </CardComponent>
               </View>
             );
           })}

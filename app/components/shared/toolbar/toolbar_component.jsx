@@ -1,34 +1,39 @@
 import React from "react";
 import { toolbarStyles } from "./_toolbar";
 import { Appbar } from 'react-native-paper';
+import { iconColor } from "../../../styles/styles";
 
 const ToolbarComponent = ({ navigation }) => {
+  const userName = 'Test User';
+
   return (
     <Appbar.Header style={ toolbarStyles.main }>
       <Appbar.Action 
-        icon="heart-outline"
-        color="#8a8a8a"
         mode="outlined" 
-        onPress={ () => navigation.navigate('Profile', {name: 'Test User'}) } 
+        icon="heart-outline"
+        color={ iconColor }
+        onPress={ 
+          () => navigation.navigate('Profile', {name: userName}) 
+        } 
       />
       <Appbar.Action 
         icon="home-outline" 
-        color="#8a8a8a"
+        color={ iconColor }
         onPress={ () => navigation.navigate('Home') } 
       />
       <Appbar.Action 
         icon="account-outline"
-        color="#8a8a8a"
+        color={ iconColor }
         onPress={ () => navigation.navigate('Settings') } 
       />
       <Appbar.Action 
         icon="brain"
-        color="#8a8a8a"
+        color={ iconColor }
         onPress={ () => navigation.navigate('Info') } 
       />
       <Appbar.Action 
         icon="map-marker" 
-        color="#8a8a8a"
+        color={ iconColor }
         onPress={ () => navigation.navigate('Resources') } 
       />
     </Appbar.Header>

@@ -1,9 +1,14 @@
 import { StyleSheet } from "react-native";
-import { windowHeight } from '../../../styles/styles';
+import { 
+  colorLightgray, 
+  colorMedGreen, 
+  colorPurple, 
+  windowHeight 
+} from '../../../styles/styles';
 
 export const checkinStyles = StyleSheet.create({
   main: {
-    backgroundColor: '#4c7264',
+    backgroundColor: colorMedGreen,
     height: windowHeight - 100,
     display: 'flex',
     alignItems: 'center',
@@ -14,7 +19,7 @@ export const checkinStyles = StyleSheet.create({
     fontWeight: 'normal',
     fontSize: 24,
     lineHeight: 24,
-    color: '#f5f5f5',
+    color: colorLightgray,
     margin: 25,
     marginBottom: 40,
   },
@@ -24,7 +29,7 @@ export const checkinStyles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 18,
     lineHeight: 22,
-    color: '#f5f5f5',
+    color: colorLightgray,
     margin: 25,
   },
 
@@ -38,7 +43,7 @@ export const checkinStyles = StyleSheet.create({
     margin: 15,
     marginTop: 40,
     borderRadius: 15,
-    backgroundColor: '#938cb1',
+    backgroundColor: colorPurple,
     padding: 5,
   },
 

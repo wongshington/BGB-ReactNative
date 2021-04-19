@@ -18,17 +18,20 @@ const feelings = [
   'Defeated',
 ];
 
-const CheckinComponent = ({ navigation, checkin }) => {
+const CheckinComponent = ({ navigation }) => {
+  const clicked = true;
+  const headerTitle = "";
+
   return (
     <View>
       <HeaderComponent 
-        title=""
+        title={ headerTitle }
         navigation={ navigation }
       >
       </HeaderComponent>
       <View style={ checkinStyles.main }>
         <Text style={ checkinStyles.text }>
-          { checkin ? 'Check in with yourself' : 'Check out' }
+          Check in with yourself
         </Text>
         <Text style={ checkinStyles.textLarge }>
           How do you feel right now?
@@ -36,19 +39,22 @@ const CheckinComponent = ({ navigation, checkin }) => {
         <View style={ checkinStyles.buttons }>
             {feelings.map((label, key) => {
               return (
-                <FeelingButtonComponent
-                  label={ label }
-                  key={ key }
-                >
-                </FeelingButtonComponent>
+                <View>
+                  <FeelingButtonComponent
+                    label={ label }
+                    key={ key }
+                  >
+                  </FeelingButtonComponent>
+                </View>
               );
             })}
         </View>
         <Button 
           mode="contained"
+          disabled={ !clicked }
           style={ checkinStyles.continue } 
           labelStyle={ checkinStyles.labelStyle }
-          onPress={ () => console.log('Pressed') }>
+          onPress={ () => navigation.navigate('Video') }>
             Continue
         </Button>
       </View>

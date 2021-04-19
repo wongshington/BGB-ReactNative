@@ -1,33 +1,41 @@
 import * as React from 'react';
-import { Button, IconButton, Card, Title, Paragraph } from 'react-native-paper';
+import { ImageBackground } from 'react-native';
+import { Button, Card, Title, Paragraph } from 'react-native-paper';
 import { cardStyles } from './_card';
 
-const CardComponent = ({ navigation, title, content, cardHeight, cardWidth }) => (
+const CardComponent = ({ 
+  navigation, 
+  title, 
+  content, 
+  cardHeight, 
+  cardWidth, 
+  cardImage, 
+  guide 
+}) => (
   <Card
     style={ [
       cardStyles.main, 
-      {height: cardHeight, width: cardWidth}
+      {height: cardHeight, width: cardWidth},
     ] }>
-     {/* <IconButton
-        style={ cardStyles.button } 
-        icon="pin"
-        size={ 35 }
-        mode="text" 
-        color="#dcdef4"
-        onPress={ () => navigation.navigate('Home') }
-      /> */}
+    <ImageBackground 
+      style={ [cardStyles.background, {height: cardHeight}] } 
+      imageStyle={ {borderRadius: 10} }
+      source={ cardImage } 
+      resizeMode="cover"
+    />
     <Card.Actions>
       <Button
-        style={ cardStyles.layout } 
-        onPress={ 
+        style={ cardStyles.link } 
+        onPress={ guide ? 
+          () => navigation.navigate('Guide', {guide: title}) :
           () => navigation.navigate('Infopage', {topic: title}) 
         }>
-          <Card.Content>
-            <Title style={ cardStyles.title }>{ title }</Title>
-            <Paragraph style={ cardStyles.content }>
-              { content }
-            </Paragraph>
-          </Card.Content>
+        <Card.Content style={ cardStyles.layout }>
+          <Title style={ cardStyles.title }>{ title }</Title>
+          <Paragraph style={ cardStyles.content }>
+            { content }
+          </Paragraph>
+        </Card.Content>
       </Button>
     </Card.Actions>
   </Card>

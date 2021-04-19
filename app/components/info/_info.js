@@ -1,5 +1,9 @@
 import { StyleSheet } from "react-native";
-import { colorWhite, windowHeight } from '../../styles/styles';
+import { 
+  colorDarkgray, 
+  colorWhite, 
+  windowHeight 
+} from '../../styles/styles';
 
 export const infoStyles = StyleSheet.create({
   main: {
@@ -7,9 +11,10 @@ export const infoStyles = StyleSheet.create({
     height: windowHeight - 200,
   },
 
-  scrollview: {
+  scrollView: {
     display: 'flex', 
     alignItems: 'center',
+    margin: 20,
   },
   
   text: {
@@ -18,8 +23,16 @@ export const infoStyles = StyleSheet.create({
     fontSize: 15,
     lineHeight: 18,
     textAlign: 'center',
-    color: '#444141',
-    margin: 40,
+    color: colorDarkgray,
+    margin: 20,
     marginTop: 0,
+  },
+
+  cardContainer: {
+    marginBottom: 20,
+  },
+
+  card: {
+    height: 100,
   }
 })

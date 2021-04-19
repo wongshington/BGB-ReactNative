@@ -1,23 +1,42 @@
 import * as React from 'react';
+import { ScrollView, Text, View } from "react-native";
 import CardComponent from '../shared/card/card_component';
 import HeaderComponent from '../shared/header/header_component';
 import SearchbarComponent from '../shared/searchbar/searchbar_component';
 import ToolbarComponent from '../shared/toolbar/toolbar_component';
-import { ScrollView, Text, View } from "react-native";
 import { infoStyles } from './_info';
 
 const topics = [
-  {title: "Meditation", content: "Learn how to meditate."},
-  {title: "Hair Care", content: "Tips, tricks, and guides to keep up with your curls."},
-  {title: "Exercise", content: "Tips on fun exercies to do in your room."},
-  {title: "Exercise", content: "Tips on fun exercies to do in your room."},
+  {
+    title: "Meditation", 
+    content: "Learn how to meditate.", 
+    cardImage: require("../../../assets/meditation.png"),
+  },
+  {
+    title: "Hair Care", 
+    content: "Tips, tricks, and guides to keep up with your curls.", 
+    cardImage: require("../../../assets/hair.png"),
+  },
+  {
+    title: "Exercise", 
+    content: "Tips on fun exercies to do in your room.", 
+    cardImage: require("../../../assets/plant.png"),
+  },
+  {
+    title: "Exercise", 
+    content: "Tips on fun exercies to do in your room.", 
+    cardImage: require("../../../assets/meditation.png"),
+  },
 ];
 
 const InfoComponent = ({ navigation }) => {
+  const headerTitle = 'Explore';
+  const infos = topics;
+
   return (
     <View>
       <HeaderComponent 
-        title="Explore"
+        title={ headerTitle }
         navigation={ navigation }
       >
       </HeaderComponent>
@@ -27,15 +46,19 @@ const InfoComponent = ({ navigation }) => {
           Find videos, guides and tutorials on different methods 
           of self care.
         </Text>
-        <ScrollView contentContainerStyle={ infoStyles.ScrollView }>
-          {topics.map((prop, key) => {
+        <ScrollView contentContainerStyle={ infoStyles.scrollView }>
+          {infos.map((prop, key) => {
             return (
-              <CardComponent
-                title={ prop.title }
-                content={ prop.content }
-                key={ key }
-                navigation={ navigation }
-              ></CardComponent>
+              <View key={ key } style={ infoStyles.cardContainer }>
+                <CardComponent
+                  title={ prop.title }
+                  content={ prop.content }
+                  navigation={ navigation }
+                  cardHeight={ 200 }
+                  cardWidth={ '100%' }
+                  cardImage={ prop.cardImage }
+                ></CardComponent>
+              </View>
             );
           })}
         </ScrollView>

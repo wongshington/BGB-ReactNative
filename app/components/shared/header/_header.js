@@ -1,8 +1,9 @@
 import { StyleSheet } from "react-native";
+import { colorGray, colorWhite } from "../../../styles/styles";
 
 export const headerStyles = StyleSheet.create({
   main: {
-    backgroundColor: '#ffffff',
+    backgroundColor: colorWhite,
     height: 75,
   },
   
@@ -11,6 +12,6 @@ export const headerStyles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 18, 
     lineHeight: 22,
-    color: '#aaaaaa',
+    color: colorGray,
   }
 })

@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { colorWhite, windowHeight } from "../../styles/styles";
+import { colorDarkgray, colorWhite, windowHeight } from "../../styles/styles";
 
 export const profileStyles = StyleSheet.create({
   main: {
@@ -36,5 +36,13 @@ export const profileStyles = StyleSheet.create({
     display: "flex",
     alignContent: "center",
     justifyContent: "center",
+  },
+
+  emptyMessage: {
+    textAlign: "center",
+    fontSize: 14,
+    color: colorDarkgray,
+    fontStyle: "italic",
+    margin: 20,
   },
 })
