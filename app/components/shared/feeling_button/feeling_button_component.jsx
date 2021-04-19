@@ -3,6 +3,7 @@ import { Button } from 'react-native-paper';
 import { Text, View } from "react-native";
 import { Icon } from "react-native-elements"
 import { feelingButtonStyles } from './_feeling_button';
+import { colorDarkPurple, colorMedGray } from '../../../styles/styles';
 
 const FeelingButtonComponent = ({ label }) => {
   const [checked, setChecked] = React.useState(false);
@@ -17,7 +18,7 @@ const FeelingButtonComponent = ({ label }) => {
           name="circle" 
           type="material-community" 
           size={ 55 } 
-          color={ checked ? '#544799' : "#c4c4c4" } 
+          color={ checked ? colorDarkPurple : colorMedGray } 
         />
         <Text style={ feelingButtonStyles.text }>{ label }</Text>
       </View>

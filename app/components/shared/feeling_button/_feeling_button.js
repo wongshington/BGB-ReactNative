@@ -6,8 +6,9 @@ export const feelingButtonStyles = StyleSheet.create({
     display: 'flex',
     alignItems: 'center',
   },
+
   text: {
-    color: "#c4c4c4",
+    color: colorLightgray,
     fontSize: 14,
     margin: 5,
   },

@@ -1,23 +1,42 @@
 import * as React from 'react';
+import { ScrollView, Text, View } from "react-native";
 import CardComponent from '../shared/card/card_component';
 import HeaderComponent from '../shared/header/header_component';
 import SearchbarComponent from '../shared/searchbar/searchbar_component';
 import ToolbarComponent from '../shared/toolbar/toolbar_component';
-import { ScrollView, Text, View } from "react-native";
 import { infoStyles } from './_info';
 
 const topics = [
-  {title: "Meditation", content: "Learn how to meditate.", color: "#7d8fd1"},
-  {title: "Hair Care", content: "Tips, tricks, and guides to keep up with your curls.", color: "#a494e3"},
-  {title: "Exercise", content: "Tips on fun exercies to do in your room.", color: "#077641"},
-  {title: "Exercise", content: "Tips on fun exercies to do in your room.", color: "#7d8fd1"},
+  {
+    title: "Meditation", 
+    content: "Learn how to meditate.", 
+    cardImage: require("../../../assets/meditation.png"),
+  },
+  {
+    title: "Hair Care", 
+    content: "Tips, tricks, and guides to keep up with your curls.", 
+    cardImage: require("../../../assets/hair.png"),
+  },
+  {
+    title: "Exercise", 
+    content: "Tips on fun exercies to do in your room.", 
+    cardImage: require("../../../assets/plant.png"),
+  },
+  {
+    title: "Exercise", 
+    content: "Tips on fun exercies to do in your room.", 
+    cardImage: require("../../../assets/meditation.png"),
+  },
 ];
 
 const InfoComponent = ({ navigation }) => {
+  const headerTitle = 'Explore';
+  const infos = topics;
+
   return (
     <View>
       <HeaderComponent 
-        title="Explore"
+        title={ headerTitle }
         navigation={ navigation }
       >
       </HeaderComponent>
@@ -27,9 +46,8 @@ const InfoComponent = ({ navigation }) => {
           Find videos, guides and tutorials on different methods 
           of self care.
         </Text>
-       
         <ScrollView contentContainerStyle={ infoStyles.scrollView }>
-          {topics.map((prop, key) => {
+          {infos.map((prop, key) => {
             return (
               <View key={ key } style={ infoStyles.cardContainer }>
                 <CardComponent
@@ -38,7 +56,7 @@ const InfoComponent = ({ navigation }) => {
                   navigation={ navigation }
                   cardHeight={ 200 }
                   cardWidth={ '100%' }
-                  cardColor={ prop.color }
+                  cardImage={ prop.cardImage }
                 ></CardComponent>
               </View>
             );

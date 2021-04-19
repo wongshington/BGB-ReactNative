@@ -12,6 +12,8 @@ import InfoComponent from "./info/info_component";
 import CheckinComponent from "./shared/checkin/checkin_component";
 import InfopageComponent from "./infopage/infopage_component";
 import ResourcesComponent from "./resources/resources_component";
+import VideoComponent from "./shared/video/video_component";
+import GuideComponent from "./guide/guide_component";
 
 const Stack = createStackNavigator();
 
@@ -23,41 +25,49 @@ const App = () => (
       headerShown: false
     }}
     >
-      {/* <Stack.Screen 
+      <Stack.Screen 
         name="Login" 
         component={LoginOptionsComponent}
       />
       <Stack.Screen 
         name="Email Auth"
         component={EmailAuthContainer}
-      /> */}
+      />
       <Stack.Screen
         name="Home"
-        component={HomeComponent}
+        component={ HomeComponent }
       />
       <Stack.Screen
         name="Info"
-        component={InfoComponent}
+        component={ InfoComponent }
       />
       <Stack.Screen
         name="Infopage"
-        component={InfopageComponent}
+        component={ InfopageComponent }
       />
       <Stack.Screen
         name="Checkin"
-        component={CheckinComponent}
+        component={ CheckinComponent }
       />
       <Stack.Screen 
         name="Profile" 
-        component={ProfileComponent}
+        component={ ProfileComponent }
       />
       <Stack.Screen 
         name="Settings" 
-        component={SettingsComponent}
+        component={ SettingsComponent }
       />
       <Stack.Screen 
         name="Resources" 
-        component={ResourcesComponent}
+        component={ ResourcesComponent }
+      />
+      <Stack.Screen 
+        name="Video" 
+        component={ VideoComponent }
+      />
+      <Stack.Screen 
+        name="Guide" 
+        component={ GuideComponent }
       />
     </Stack.Navigator>
   </NavigationContainer>

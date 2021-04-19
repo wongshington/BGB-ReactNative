@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { windowWidth } from "../../../styles/styles";
+import { colorLightPurple, colorWhite } from "../../../styles/styles";
 
 export const cardStyles = StyleSheet.create({
  main: {
@@ -9,7 +9,6 @@ export const cardStyles = StyleSheet.create({
    shadowOpacity: 0.3,
    shadowRadius: 2,
    elevation: 2,
-   backgroundColor: '#8470D3',
    position: 'relative',
   },
 
@@ -17,14 +16,7 @@ export const cardStyles = StyleSheet.create({
    display: 'flex',
    justifyContent: 'center',
    height: '100%',
-   width: '100%',
-  },
-
-  button: {
-    position: 'absolute',
-    top: 10,
-    right: 10,
-    transform: [{rotate: "30deg"}],
+   minWidth: '100%',
   },
 
   link: {
@@ -34,12 +26,18 @@ export const cardStyles = StyleSheet.create({
   title: {
     fontSize: 21,
     lineHeight: 25,
-    color: '#ffffff',
+    color: colorWhite,
   },
 
   content: {
     fontSize: 16,
     lineHeight: 19,
-    color: '#dbd3f9',
+    color: colorLightPurple,
+  },
+
+  background: {
+    overflow: 'hidden', 
+    width: '100%', 
+    position: 'absolute'
   },
 })

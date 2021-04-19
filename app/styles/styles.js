@@ -1,17 +1,24 @@
-import { Dimensions, StyleSheet, useWindowDimensions } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
 
 // Window dimensions
 export const windowWidth = Dimensions.get('window').width;
 export const windowHeight = Dimensions.get('window').height;
 
 // Universal color variables
+export const colorBlack = "#000";
+export const colorDarkgray = "#383838";
 export const colorGray = "#979191";
 export const colorLightgray = "#f3f3f3";
-export const colorDarkgray = "#383838";
-export const colorWhite = "#fff";
+export const colorMedGray = '#d2d2d2';
+export const colorMedGreen = "#4c7264";
+export const colorLightPurple = "#dbd3f9";
 export const colorPurple = "#a494e3";
-export const colorBlack = "#000";
+export const colorPalePurple = "#938CB1";
+export const colorDarkPurple = "#544799";
 export const colorTransparent = "#00FFFFFF";
+export const colorWhite = "#fff";
+export const colorWhiteSmoke = "#f5f5f5";
+export const iconColor = "#8a8a8a";
 
 export const layoutStyles = StyleSheet.create({
   backgroundLayout: {

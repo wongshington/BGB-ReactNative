@@ -32,8 +32,9 @@ export default class GridComponent extends Component {
                   content={ el.content }
                   cardHeight={ this.props.cardHeight }
                   cardWidth={ this.props.cardWidth }
-                  cardColor={ this.props.cardColor }
+                  cardImage={ el.image }
                   navigation={ this.props.navigation }
+                  guide={ this.props.guide }
                 >
                 </CardComponent>
               </View>

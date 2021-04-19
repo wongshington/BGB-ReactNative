@@ -15,7 +15,7 @@ const HomeComponent = ({ navigation }) => {
         title='Home'
       >
       </HeaderComponent>
-      <View  style={homeStyles.main}>
+      <View  style={ homeStyles.main }>
         <RecommendationComponent navigation={ navigation }>
         </RecommendationComponent>
         <HistoryComponent></HistoryComponent>

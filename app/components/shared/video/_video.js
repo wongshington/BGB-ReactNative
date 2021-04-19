@@ -1,41 +1,48 @@
-import * as React from 'react';
-import HeaderComponent from '../header/header_component';
-import { Text, View } from "react-native";
-import { checkinStyles } from './_checkin';
-import FeelingButtonComponent from '../feeling_button/feeling_button_component';
-import { Button } from 'react-native-paper';
+import { StyleSheet } from "react-native";
+import { 
+  colorMedGreen, 
+  colorWhiteSmoke, 
+  colorPurple,
+  windowHeight, 
+} from '../../../styles/styles';
 
-const feelings = [
-  'Happy', 
-  'Calm', 
-  'Tired', 
-  'Sad', 
-  'Bored', 
-  'Angry', 
-  'Nervous', 
-  'Anxious', 
-  'Excited', 
-  'Defeated',
-];
+export const videoStyles = StyleSheet.create({
+  main: {
+    backgroundColor: colorMedGreen,
+    height: windowHeight - 100,
+    display: 'flex',
+    alignItems: 'center',
+  },
 
-const CheckinComponent = ({ navigation, title }) => {
-  return (
-    <View>
-      <HeaderComponent 
-        title=""
-        navigation={ navigation }
-      >
-      </HeaderComponent>
-      <View style={ checkinStyles.main }>
-        <Text style={ checkinStyles.text }>
-          Daily Videos
-        </Text>
-        <Text style={ checkinStyles.textLarge }>
-          { title }
-        </Text>
-      </View>
-    </View>
-  );
-};
+  textLarge: {
+    fontStyle: 'normal',
+    fontWeight: 'normal',
+    fontSize: 24,
+    lineHeight: 24,
+    color: colorWhiteSmoke,
+    margin: 25,
+    marginBottom: 40,
+  },
 
-export default CheckinComponent;
+  text: {
+    fontStyle: 'normal',
+    fontWeight: 'bold',
+    fontSize: 18,
+    lineHeight: 22,
+    color: colorWhiteSmoke,
+    margin: 25,
+  },
+
+  continue: {
+    margin: 15,
+    marginTop: 40,
+    borderRadius: 15,
+    backgroundColor: colorPurple,
+    padding: 5,
+  },
+
+  labelStyle: {
+    textTransform: 'lowercase',
+    textDecorationLine: 'underline',
+  },
+})
