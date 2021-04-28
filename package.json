@@ -6,11 +6,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-
-    "build": "expo build:web",
-
-    "test": "echo \"No tests yet.\""
-
+    "build": "expo build:web"
   },
   "dependencies": {
     "@iconify/react": "^1.1.4",
