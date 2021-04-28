@@ -11,7 +11,7 @@ import SettingsComponent from "./settings/settings_component";
 import InfoComponent from "./info/info_component";
 import CheckinComponent from "./shared/checkin/checkin_component";
 import InfopageComponent from "./infopage/infopage_component";
-import ResourcesComponent from "./resources/resources_component";
+import ResourcesContainer from "./resources/resource_container";
 import MapComponent from './map/map_component';
 
 const Stack = createStackNavigator();
@@ -24,6 +24,10 @@ const App = () => (
       headerShown: false
     }}
     >
+      <Stack.Screen 
+        name="Resources" 
+        component={ResourcesContainer}
+      />
       <Stack.Screen 
         name="Map" 
         component={MapComponent}
@@ -59,10 +63,6 @@ const App = () => (
       <Stack.Screen 
         name="Settings" 
         component={SettingsComponent}
-      />
-      <Stack.Screen 
-        name="Resources" 
-        component={ResourcesComponent}
       />
     </Stack.Navigator>
   </NavigationContainer>

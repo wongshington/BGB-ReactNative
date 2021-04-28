@@ -1,12 +1,24 @@
-export const showResource = async (resource) => {
+export const showResource = async (resourceId) => {
     const response = await fetch(
-        "http://localhost:3000/resources/1",
+        `http://localhost:3000/resources/${resourceId}`,
         {
-            method: 'POST',
+            method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ resource })
+            }
+        }
+    );
+    return response.json();
+};
+
+export const fetchResources = async () => {
+    const response = await fetch(
+        `http://localhost:3000/resources/`,
+        {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
         }
     );
     return response.json();

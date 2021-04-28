@@ -1,10 +1,15 @@
 import { connect } from 'react-redux';
 import ResourcesComponent from './resources_component';
 
-import { showResource } from '../../../actions/resource_actions';
+import { showResource, fetchResources } from '../../actions/resource_actions';
 
 const mapDTP = dispatch => ({
-    showResource: resource => dispatch(showResource(resource)),
+    showResource: resourceId => dispatch(showResource(resourceId)),
+    fetchResources: () => dispatch(fetchResources())
 });
 
-export default connect(null, mapDTP)(ResourcesComponent);
+const mapSTP = state => ({
+    resources: Object.values(state.entities.resources)
+});
+
+export default connect(mapSTP, mapDTP)(ResourcesComponent);
