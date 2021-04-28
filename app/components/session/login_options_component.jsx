@@ -14,7 +14,10 @@ const LoginOptionsComponent = ({ navigation }) => {
           </View>
 
           <View style={loginOptionsStyles.titleContainer}>
-            <Text style={[loginOptionsStyles.Title,loginOptionsStyles.font]}>
+            <Text 
+              style={[loginOptionsStyles.Title,loginOptionsStyles.font]}
+              onPress={() => navigation.navigate("Home")}
+            >
               BGB
             </Text>
           </View>

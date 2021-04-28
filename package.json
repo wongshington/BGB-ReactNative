@@ -5,7 +5,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "build": "expo build:web"
   },
   "dependencies": {
     "@react-native-community/checkbox": "^0.5.6",
@@ -27,9 +28,11 @@
     "react-native-material-buttons": "^0.6.0",
     "react-native-material-tabs": "^4.1.2",
     "react-native-paper": "^4.6.0",
+    "react-native-screens": "^3.1.1",
     "react-native-vector-icons": "^7.1.0",
     "react-native-video": "^5.1.1",
     "react-native-web": "~0.13.12",
+    "react-native-web-webview": "^1.0.2",
     "react-native-webview": "^11.4.0",
     "react-native-youtube-iframe": "^2.0.1",
     "react-redux": "^7.2.1",
@@ -38,7 +41,8 @@
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
-    "@babel/core": "~7.9.0"
+    "@babel/core": "~7.9.0",
+    "expo-cli": "^4.4.3"
   },
   "private": true,
   "name": "BGB-ReactNative"
